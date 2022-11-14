@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body h1 {
+  text-align: center;
+  background-image: url(fireball-422746_1920.jpg);
+}
+
+body p {
+  text-align: center;
+}
+
+body ul li p {
+  background-image: url(fireball-422746_1920.jpg);
+  border-radius: 10rem;
+}
+
+body ul li button {
+  border-radius: 10rem;
+}
+
+body {
+  background-image: url(fireball-422746_1920.jpg);
+  z-index: -1;
+}
+
+main {
+  background-image: url(R.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+body ul {
+  display: grid;
+  /* grid-template-columns: 2fr, 2fr, 2fr; */
+  grid-auto-rows: 80px;
+  justify-items: center;
+  align-items: center;
+  list-style: none;
+}
+
+body ul:last-child li:first-child button {
+  background-color: red;
+}
+
+body ul:last-child li:nth-child(2) button {
+  background-color: orange;
+}
+
+body ul:last-child li:last-child button {
+  background-color: greenyellow;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  background-color: aliceblue;
+}
+
+footer ul li {
+  padding-left: 1rem;
+}
