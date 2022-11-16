@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* importante: para fijar el footer abajo { */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* } fin importante  */
+  background-image: url(fireball-422746_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -10;
+}
+header {
+  padding: 2rem;
+  background-color: black;
+}
+
+body header h1 {
+  text-align: center;
+  color: orangered;
+
+  padding-bottom: 0.5rem;
+}
+body header p {
+  text-align: center;
+  color: yellow;
+
+  padding-bottom: 0.5rem;
+}
+main {
+  margin: 0 auto;
+  width: 40%;
+  /* height: 600px; */
+  min-width: 400px;
+  position: relative;
+  /* background-image: url(bateria.jpg);
+  background-repeat: no-repeat;
+  background-size: contain; */
+}
+main img {
+  width: 100%;
+  display: block;
+}
+body main ul li p {
+  /* background-image: url(fireball-422746_1920.jpg); */
+  width: 20px;
+  height: 20px;
+  border-radius: 10rem;
+  text-align: center;
+  line-height: 20px;
+}
+body main ul li button {
+  border-radius: 10rem;
+  margin-right: 15px;
+  margin-top: 10px;
+  position: absolute;
+}
+body main ul li button#crash {
+  /* position: relativ; */
+  left: 30em;
+  top: 30em;
+  text-align: center;
+}
+body main ul#bateria {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+body main ul#grabacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  list-style: none;
+}
+body main ul#grabacion li button {
+  background-color: red;
+}
+body ul:last-child li:first-child button {
+  background-color: red;
+}
+body ul:last-child li:nth-child(2) button {
+  background-color: black;
+}
+body ul:last-child li:last-child button {
+  background-color: greenyellow;
+}
+body footer {
+  /* importante - para fijar el footer abajo */
+  margin-top: auto;
+}
+body footer ul {
+  display: flex;
+  list-style: none;
+  background-color: aliceblue;
+}
+footer ul li {
+  padding-left: 1rem;
+}
