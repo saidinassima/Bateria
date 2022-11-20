@@ -3,6 +3,12 @@ const sound = {
   b: "crash.wav",
   q: "hihat-close.wav",
   o: "hihat-open.wav",
+  v: "kick.wav",
+  e: "ride.wav",
+  w: "snare.wav",
+  r: "tom-high.wav",
+  i: "tom-low.wav",
+  u: "tom-mid.wav",
 };
 const sessionRecord = [];
 let isRecording = false;
@@ -41,11 +47,54 @@ playBtn.addEventListener("click", () => {
   if (isRecording) {
     return;
   }
-  new Audio(`/sounds/${sound[sessionRecord[0].key]}`).play();
-  setTimeout(() => {
-    new Audio(`/sounds/${sound[sessionRecord[1].key]}`).play();
-  }, sessionRecord[1].timeNote - sessionRecord[0].timeNote);
-});
 
+  new Audio(`/sounds/${sound[sessionRecord[0].key]}`).play();
+
+  for (let notas of sessionRecord) {
+    console.log(notas);
+    // console.log(sound[sessionRecord[notas].key]);
+    // new Audio(`/sounds/${sound[sessionRecord[notas].key]}`).play();
+    // sessionRecord[notas] - sessionRecord[0];
+    // console.log(sessionRecord[notas]);
+  }
+
+  for (let notas = 1; notas > 0; notas++) {
+    setTimeout(() => {
+      if (notas === sessionRecord.length) {
+        notas = 1;
+      }
+      // timeNote = 0;
+      // console.log(timeNote);
+
+      new Audio(`/sounds/${sound[sessionRecord[notas.key]]}`).play();
+    }, sessionRecord[notas.timeNote] - sessionRecord[0].timeNote);
+    break;
+  }
+});
+//   setTimeout(() => {
+//     new Audio(`/sounds/${sound[sessionRecord[item].key]}`).play();
+//   }, sessionRecord[item].timeNote - sessionRecord[0].timeNote);
+// });
+
+//   new Audio(`/sounds/${sound[sessionRecord[0].key]}`).play();
+
+//   for (let item of sessionRecord) {
+//     setTimeout(() => {
+//       new Audio(`/sounds/${sound[sessionRecord[item].key]}`).play();
+//     },
+
+//     sessionRecord[item].timeNote - sessionRecord[0].timeNote);
+//   }
+// });
+
+// sessionRecord.forEach(setTimeout => {
+
+// });
+
+//   setTimeout(() => {
+//     new Audio(`/sounds/${sound[sessionRecord[].key]}`).play();
+//   }, sessionRecord[] - sessionRecord[].timeNote);
+// });
+// for(let i=0; i=sessionRecord.length; i++)
 // Date.now();
-// setTimeout();
+// setTimeout()
